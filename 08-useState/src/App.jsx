@@ -3,17 +3,25 @@ import { useState } from 'react'
 
 const App = () => {
 
-  const [num, setNum] = useState(10)
-
-   function changeNum() {
-    setNum(30)
+  const [num, setNum] = useState(2)
+  
+  function increaseNum() {
+    setNum(num+1)
+  }
+   function decreaseNum() {
+    setNum(num-1)
+   }
+   function jump5Num() {
+    setNum(num+5)
    }
   return (
     
 
       <div >
-        <h1>Value of num is {num}</h1>
-        <button onClick={changeNum}>Change Number</button>
+        <h1>{num}</h1>
+        <button onClick={increaseNum}>Increase</button>
+        <button onClick={decreaseNum}>Decrease</button>
+        <button onClick={jump5Num}>Increase by 5</button>
       </div>
 
   ) 
